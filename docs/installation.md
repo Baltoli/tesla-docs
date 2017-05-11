@@ -1,7 +1,10 @@
 # Installing TESLA
 
-Currently TESLA has to be built from source (though package manager
-distributions are in the works).
+If you don't need to work on the TESLA source, you can install it from Homebrew:
+
+```shell
+brew install baltoli/tesla/tesla
+```
 
 ## Dependencies
 
