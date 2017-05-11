@@ -12,7 +12,16 @@ if [ ! -d "$SITE_DIR/.git" ]; then
   exit 2
 fi
 
+if ! git diff-index --quiet HEAD --; then
+  echo "Uncommitted changes - not deploying"
+  exit 3
+fi
+
 SHA=$(git rev-parse HEAD)
+
+pushd docs
+make
+popd
 
 mkdocs build -d site
 cp -R site/* $SITE_DIR
