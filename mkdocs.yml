@@ -11,6 +11,7 @@ pages:
     - Tutorial: programming.md
     - "Macro Reference": macros.md
     - "Static Analysis": static.md
+    - "Command Reference": commands.md
 
 markdown_extensions:
   - smarty
